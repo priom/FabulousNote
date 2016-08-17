@@ -1,0 +1,9 @@
+.container
+  .col-md-12
+    %h1= @note.title
+    %p= simple_format(@note.content)
+
+    .buttons
+      = link_to "All notes", notes_path, class: "btn btn-default"
+      = link_to "Edit note", edit_note_path(@note), class: "btn btn-default"
+      = link_to "Delete note", note_path(@note), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger"

@@ -1,0 +1,67 @@
+%header#home
+  / Color over Image
+  .color-overlay
+    / navbar log
+    .navbar.logo-nav
+      .container
+        .row
+          .col-sm-6.col-md-6.col-xs-4
+            .navbar-header
+              .logo
+                %a{:href => "/"}
+                  %img{:alt => "", :src => "assets/logo.png"}
+          .col-sm-6.col-md-6.col-xs-4
+            .navbar-head
+              = link_to "Sign In", new_user_session_path, id: "signin"
+    / Heading And Texts
+    .container
+      .row
+        .col-md-10.col-md-offset-1.intro-section
+          %h1.intro A Product That Can Change Your Life
+          %p.sub-heading Start organizing your life by taking daily fabulous notes. Be productive and successful.
+          / button
+          %a.btn.btn-common.wow.bounceIn{:href => "#main-features"} FabulousNote Features
+  / Heading And Texts End
+  / Color over Image  End
+/ HEADER END
+/ Features Section
+%section#main-features
+  .feature-list.item-1
+    .container
+      .row
+        .col-sm-6.col-md-6
+          %img.wow.fadeInLeft{:alt => "", "data-wow-duration" => "0.80s", :src => "assets/img1.jpg"}/
+        .col-md-6
+          .feature-content.wow.fadeInRight{"data-wow-duration" => "0.80s"}
+            %h3.small-title Simple, Fast and Use it for FREE!
+            %p SpeedNote is Simple, Fast and best of all it's absolutely FREE of cost!
+            .btn.btn-common.wow.bounceIn= link_to "Give a Try", new_user_registration_path, class: "signup_btn"
+  .feature-list.item-2
+    .container
+      .row
+        .col-sm-6.col-md-6
+          .feature-content.wow.fadeInLeft{"data-wow-duration" => "0.80s"}
+            %h3.small-title Take Notes Of Everything
+            %p Remember something? Or want to take to jot down something very quickly? Use FabulousNote to organize and simplify your life!
+            .btn.btn-common.wow.bounceIn= link_to "Check it Out", new_user_registration_path, class: "signup_btn"
+        .col-sm-6.col-md-6
+          %img.wow.fadeInRight{:alt => "", "data-wow-duration" => "0.80s", :src => "assets/img2.jpg"}/
+  .feature-list.item-3
+    .container
+      .row
+        .col-sm-6.col-md-6
+          %img.wow.fadeInLeft{:alt => "", "data-wow-duration" => "0.80s", :src => "assets/img3.jpg"}/
+        .col-md-6
+          .feature-content.wow.fadeInRight{"data-wow-duration" => "0.80s"}
+            %h3.small-title Sync all your notes on cloud!
+            %p All your notes are synced and secured on cloud to access it anywhere from any device.
+            .btn.btn-common.wow.bounceIn= link_to "Sign Up Now", new_user_registration_path, class: "signup_btn"
+
+%footer#footer
+  .container
+    %p
+      \© Copyright Protected by
+      = succeed "" do
+        %a.copyright{:href => "/", :title => "FabulousNote"} FabulousNote
+        2016
+        / footer Section End

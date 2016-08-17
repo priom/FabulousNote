@@ -1,0 +1,16 @@
+.container
+  .col-md-12
+    - unless @notes.blank?
+      - @notes.each do |note|
+        %a{ href: (url_for [note]) }
+          .note
+            %h1.title= note.title
+            %p.date= time_ago_in_words(note.created_at)
+            %p.content= truncate(note.content, length:50)
+    - else
+      %h2 Create note!
+      %p Start creating notes and organizing your life!
+      %button= link_to "Create new note", new_note_path, class: "btn btn-success"
+
+    %button= link_to "Create new note", new_note_path, class: "btn btn-default"
+
