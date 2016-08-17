@@ -3,6 +3,12 @@
 %head
   %title FabulousNote | Note in Fabulous way
   = csrf_meta_tags
+  %script{:async => "", :src => "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}
+  :javascript
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-6751047416425015",
+      enable_page_level_ads: true
+    });
 
 %body
   %header
@@ -19,8 +25,14 @@
       -#= link_to "Log In", new_user_session_path
     = yield
 
+  .container-fluid
+    %script{:async => "", :src => "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}
+    / FabulousNote
+    %ins.adsbygoogle{"data-ad-client" => "ca-pub-6751047416425015", "data-ad-format" => "auto", "data-ad-slot" => "2199953486", :style => "display:block"}
+    :javascript
+      (adsbygoogle = window.adsbygoogle || []).push({});
 
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
   = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-
+  
 
