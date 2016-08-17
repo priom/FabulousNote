@@ -15,7 +15,7 @@
     - if user_signed_in?
       .navbar.navbar-default
         %a{:href => "/"}
-        %img{:alt => "FabulousNote", :src => "/assets/logo.png", id:"logo"}
+        %img{:alt => "FabulousNote", :src => asset_path("logo.png"), id:"logo"}
         = link_to "Sign Out", destroy_user_session_path, method: :delete, id:"signout"
         .container
           %p.notice.hidden= notice
