@@ -103,7 +103,7 @@ i {
   transition: all 0.2s linear;
 }
 #home {
-  background: url(../assets/bg.jpg) center center ;
+  background: url(image_path("bg.jpg")) center center ;
   -webkit-background-size: cover;
   background-size: cover;
 }
